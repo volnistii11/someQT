@@ -29,10 +29,10 @@ void FcpDumpReader::ReadDump()
             QRegularExpressionMatch match = i.next();
             QString coordinate = match.captured(0);
             if (x_or_y%2 == 0){
-                printf("x: %s\n",coordinate.toUtf8().data());
+                qDebug()<<"x:"<<coordinate;
             }
             else {
-                printf("y: %s\n",coordinate.toUtf8().data());
+                qDebug()<<"y:"<<coordinate;
             }
             x_or_y++;
         }
